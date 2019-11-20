@@ -201,34 +201,34 @@ header {
     .progressbar-layout:not(:last-of-type) {
         margin-bottom: 25px;
     }
-    #HTML {
+    #html {
         background: linear-gradient(to right, $subtext-color 80%, $logos-color 80%);
     }
-    #CSS {
+    #css {
         background: linear-gradient(to right, $subtext-color 70%, $logos-color 70%);
     }
-    #CSS3ANIMATIONS {
-        background: linear-gradient(to right, $subtext-color 75%, $logos-color 75%);
+    #javascript {
+        background: linear-gradient(to right, $subtext-color 50%, $logos-color 50%);
+    }
+    #environment {
+        background: linear-gradient(to right, $subtext-color 50%, $logos-color 50%);
     } 
-    #JAVASCRIPT {
-        background: linear-gradient(to right, $subtext-color 55%, $logos-color 55%);
-    } 
-    #REACT {
+    #react {
         background: linear-gradient(to right, $subtext-color 25%, $logos-color 25%);    
     }
-    #NODE {
+    #node {
         background: linear-gradient(to right, $subtext-color 40%, $logos-color 40%);    
     }
-    #SEO {
+    #seo {
         background: linear-gradient(to right, $subtext-color 20%, $logos-color 20%);
     } 
-    #GIT {
+    #git {
         background: linear-gradient(to right, $subtext-color 85%, $logos-color 85%);
     } 
-    #PHOTOSHOP {
+    #photoshop {
         background: linear-gradient(to right, $subtext-color 30%, $logos-color 30%);
     }
-    #ENGLISH {
+    #english {
         background: linear-gradient(to right, $subtext-color 75%, $logos-color 75%);
     }
 }

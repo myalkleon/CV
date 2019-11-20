@@ -225,52 +225,52 @@ header h1 {
   margin-bottom: 25px;
 }
 
-.skills #HTML {
+.skills #html {
   background: -webkit-gradient(linear, left top, right top, color-stop(80%, #E0A80D), color-stop(80%, #3F4040));
   background: linear-gradient(to right, #E0A80D 80%, #3F4040 80%);
 }
 
-.skills #CSS {
+.skills #css {
   background: -webkit-gradient(linear, left top, right top, color-stop(70%, #E0A80D), color-stop(70%, #3F4040));
   background: linear-gradient(to right, #E0A80D 70%, #3F4040 70%);
 }
 
-.skills #CSS3ANIMATIONS {
-  background: -webkit-gradient(linear, left top, right top, color-stop(75%, #E0A80D), color-stop(75%, #3F4040));
-  background: linear-gradient(to right, #E0A80D 75%, #3F4040 75%);
+.skills #javascript {
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #E0A80D), color-stop(50%, #3F4040));
+  background: linear-gradient(to right, #E0A80D 50%, #3F4040 50%);
 }
 
-.skills #JAVASCRIPT {
-  background: -webkit-gradient(linear, left top, right top, color-stop(55%, #E0A80D), color-stop(55%, #3F4040));
-  background: linear-gradient(to right, #E0A80D 55%, #3F4040 55%);
+.skills #environment {
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #E0A80D), color-stop(50%, #3F4040));
+  background: linear-gradient(to right, #E0A80D 50%, #3F4040 50%);
 }
 
-.skills #REACT {
+.skills #react {
   background: -webkit-gradient(linear, left top, right top, color-stop(25%, #E0A80D), color-stop(25%, #3F4040));
   background: linear-gradient(to right, #E0A80D 25%, #3F4040 25%);
 }
 
-.skills #NODE {
+.skills #node {
   background: -webkit-gradient(linear, left top, right top, color-stop(40%, #E0A80D), color-stop(40%, #3F4040));
   background: linear-gradient(to right, #E0A80D 40%, #3F4040 40%);
 }
 
-.skills #SEO {
+.skills #seo {
   background: -webkit-gradient(linear, left top, right top, color-stop(20%, #E0A80D), color-stop(20%, #3F4040));
   background: linear-gradient(to right, #E0A80D 20%, #3F4040 20%);
 }
 
-.skills #GIT {
+.skills #git {
   background: -webkit-gradient(linear, left top, right top, color-stop(85%, #E0A80D), color-stop(85%, #3F4040));
   background: linear-gradient(to right, #E0A80D 85%, #3F4040 85%);
 }
 
-.skills #PHOTOSHOP {
+.skills #photoshop {
   background: -webkit-gradient(linear, left top, right top, color-stop(30%, #E0A80D), color-stop(30%, #3F4040));
   background: linear-gradient(to right, #E0A80D 30%, #3F4040 30%);
 }
 
-.skills #ENGLISH {
+.skills #english {
   background: -webkit-gradient(linear, left top, right top, color-stop(75%, #E0A80D), color-stop(75%, #3F4040));
   background: linear-gradient(to right, #E0A80D 75%, #3F4040 75%);
 }
