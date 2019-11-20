@@ -27,6 +27,7 @@ a:hover, button:hover {
 label {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
 }
 
 .subtext {
@@ -147,6 +148,19 @@ header h1 {
   background-size: cover;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
+  -webkit-transition: -webkit-transform 250ms;
+  transition: -webkit-transform 250ms;
+  transition: transform 250ms;
+  transition: transform 250ms, -webkit-transform 250ms;
+}
+
+.social-links li a:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: -webkit-transform 250ms;
+  transition: -webkit-transform 250ms;
+  transition: transform 250ms;
+  transition: transform 250ms, -webkit-transform 250ms;
 }
 
 .social-links li a:not(:last-of-type) {
@@ -170,7 +184,7 @@ header h1 {
 }
 
 .social-links li:not(:first-of-type) {
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 .contacts h3 {
