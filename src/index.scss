@@ -132,25 +132,28 @@ header {
             display: block;
             width: 35px;
             height: 35px;
-            background-image: url("../img/logos-512.png");
             background-size: cover;
             box-sizing: content-box;
-            // transition: background-image 10ms;
         }
-        a:hover {
-            background-image: url("../img/logos-hover-512.png");
-            background-size: cover;
-            // transition: background-image 10ms;
+        a:not(:last-of-type) {
+            margin-left: 15px;
         }
-        #vk-link {
-            background-position: -35px;
-            margin-left: 5px;
+        a:hover svg path {
+            fill: $subtext-color;
         }
-        #telegram-link {
-            background-position: -70px;
-            margin-left: 5px;
+        a#telegram-link:hover svg path[style*="#25D9F8"] { //change light
+            fill: $subtext-color !important;
         }
-    }        
+        a#telegram-link:hover svg path[style*="#00C0F1"] { //change darker
+            fill: darken($subtext-color, 5) !important;
+        }
+        a#telegram-link:hover svg path[style*="#009AE4"] { //change the darkest
+            fill: darken($subtext-color, 10) !important;
+        }
+    } 
+    li:not(:first-of-type) {
+        margin-left: 5px;
+    }       
 }
  
 .contacts {

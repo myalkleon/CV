@@ -144,24 +144,32 @@ header h1 {
   display: block;
   width: 35px;
   height: 35px;
-  background-image: url("../img/logos-512.png");
   background-size: cover;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
 }
 
-.social-links li a:hover {
-  background-image: url("../img/logos-hover-512.png");
-  background-size: cover;
+.social-links li a:not(:last-of-type) {
+  margin-left: 15px;
 }
 
-.social-links li #vk-link {
-  background-position: -35px;
-  margin-left: 5px;
+.social-links li a:hover svg path {
+  fill: #E0A80D;
 }
 
-.social-links li #telegram-link {
-  background-position: -70px;
+.social-links li a#telegram-link:hover svg path[style*="#25D9F8"] {
+  fill: #E0A80D !important;
+}
+
+.social-links li a#telegram-link:hover svg path[style*="#00C0F1"] {
+  fill: #c8960c !important;
+}
+
+.social-links li a#telegram-link:hover svg path[style*="#009AE4"] {
+  fill: #b0840a !important;
+}
+
+.social-links li:not(:first-of-type) {
   margin-left: 5px;
 }
 
