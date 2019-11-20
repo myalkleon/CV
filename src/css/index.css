@@ -219,13 +219,18 @@ header h1 {
 }
 
 .skills #JAVASCRIPT {
-  background: -webkit-gradient(linear, left top, right top, color-stop(60%, #E0A80D), color-stop(60%, #3F4040));
-  background: linear-gradient(to right, #E0A80D 60%, #3F4040 60%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(55%, #E0A80D), color-stop(55%, #3F4040));
+  background: linear-gradient(to right, #E0A80D 55%, #3F4040 55%);
 }
 
 .skills #REACT {
   background: -webkit-gradient(linear, left top, right top, color-stop(25%, #E0A80D), color-stop(25%, #3F4040));
   background: linear-gradient(to right, #E0A80D 25%, #3F4040 25%);
+}
+
+.skills #NODE {
+  background: -webkit-gradient(linear, left top, right top, color-stop(40%, #E0A80D), color-stop(40%, #3F4040));
+  background: linear-gradient(to right, #E0A80D 40%, #3F4040 40%);
 }
 
 .skills #SEO {
@@ -234,13 +239,13 @@ header h1 {
 }
 
 .skills #GIT {
-  background: -webkit-gradient(linear, left top, right top, color-stop(70%, #E0A80D), color-stop(70%, #3F4040));
-  background: linear-gradient(to right, #E0A80D 70%, #3F4040 70%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(85%, #E0A80D), color-stop(85%, #3F4040));
+  background: linear-gradient(to right, #E0A80D 85%, #3F4040 85%);
 }
 
 .skills #PHOTOSHOP {
-  background: -webkit-gradient(linear, left top, right top, color-stop(40%, #E0A80D), color-stop(40%, #3F4040));
-  background: linear-gradient(to right, #E0A80D 40%, #3F4040 40%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(30%, #E0A80D), color-stop(30%, #3F4040));
+  background: linear-gradient(to right, #E0A80D 30%, #3F4040 30%);
 }
 
 .skills #ENGLISH {
