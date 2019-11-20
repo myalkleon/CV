@@ -1,0 +1,492 @@
+$main-color: #2D2E2E; //dark
+$submain-color: #282929; //darker
+
+$text-color: #A4A5A6;
+$subtext-color: #E0A80D;
+
+$logos-color: #3F4040;
+
+$partition-color: #747575;
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: $text-color;
+    font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    line-height: 100%;
+    font-weight: normal;
+}
+
+@mixin paddings_for_element {
+    padding-top: 30px;
+    padding-bottom: 30px;    
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover, button:hover {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+    -webkit-tap-highlight-color: transparent;
+    color: $subtext-color;
+}
+
+label {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+    -webkit-tap-highlight-color: transparent;
+}
+
+.subtext {
+    color: $subtext-color;
+}
+
+hr {
+    width: 80%;
+    border: none;
+    border-top: 1px solid $partition-color;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {    
+    border-bottom: 1px solid $partition-color;
+    width: 100%;
+    background-color: $main-color;
+    header {
+        @include paddings_for_element();
+        background-color: $submain-color;
+        border-bottom: 1px solid $partition-color;
+        padding-left: 25px;
+        h4 {
+            font-size: 105%;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+    }
+    .section-main-area {
+        padding-left: 25px;
+        padding-right: 25px;
+        @include paddings_for_element();      
+    }
+}
+
+header {
+    background-color: $main-color;
+    section {
+        @include paddings_for_element();
+    }
+    section:nth-of-type(1) {
+        border-bottom: none;
+    }
+    .person-photo {
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+    .typing-container-1 {
+        height: 40px;
+        .name {
+            font-size: 250%;
+        }
+        .name + span {
+            font-size: 200%;
+        }
+    }
+    .typing-container-2 {
+        position: relative;
+        height: 45px;
+        margin-bottom: 20px;
+        .surname {
+            font-size: 300%;
+            text-transform: uppercase;
+        }
+        .surname + span {
+            position: absolute;
+            top: -5px;
+            font-size: 300%;
+            color: $subtext-color;
+        }
+    }
+    h1 {
+        font-size: 95%;
+        margin-bottom: 25px;
+    }
+}
+
+.social-links {
+    font-size: 0;
+    li {
+        display: inline-block;
+        a {
+            display: block;
+            width: 35px;
+            height: 35px;
+            background-image: url("../img/logos-512.png");
+            background-size: cover;
+            box-sizing: content-box;
+            // transition: background-image 10ms;
+        }
+        a:hover {
+            background-image: url("../img/logos-hover-512.png");
+            background-size: cover;
+            // transition: background-image 10ms;
+        }
+        #vk-link {
+            background-position: -35px;
+            margin-left: 5px;
+        }
+        #telegram-link {
+            background-position: -70px;
+            margin-left: 5px;
+        }
+    }        
+}
+ 
+.contacts {
+    h3 {
+        margin-bottom: 10px;
+    }
+    a:not(:last-of-type) {
+        margin-bottom: 35px;
+    }
+}
+
+.section-main-area {
+    p {
+        line-height: 115%;
+    }   
+    p:not(:last-of-type) {
+        margin-bottom: 25px;
+    }
+}    
+
+.skills {
+    .progressbar-layout {        
+        .progressbar-header {
+            margin-bottom: 10px;
+            .progressbar-percentage {
+                font-size: 130%;
+            }
+            .progressbar-name {
+                font-size: 130%;
+                padding-left: 5px;
+            }
+        }
+        .progressbar {
+            height: 5px;
+            width: 100%;
+        }
+    } 
+    .progressbar-layout:not(:last-of-type) {
+        margin-bottom: 25px;
+    }
+    #HTML {
+        background: linear-gradient(to right, $subtext-color 80%, $logos-color 80%);
+    }
+    #CSS {
+        background: linear-gradient(to right, $subtext-color 70%, $logos-color 70%);
+    }
+    #CSS3ANIMATIONS {
+        background: linear-gradient(to right, $subtext-color 75%, $logos-color 75%);
+    } 
+    #JAVASCRIPT {
+        background: linear-gradient(to right, $subtext-color 60%, $logos-color 60%);
+    } 
+    #REACT {
+        background: linear-gradient(to right, $subtext-color 25%, $logos-color 25%);    
+    }
+    #SEO {
+        background: linear-gradient(to right, $subtext-color 20%, $logos-color 20%);
+    } 
+    #GIT {
+        background: linear-gradient(to right, $subtext-color 70%, $logos-color 70%);
+    } 
+    #PHOTOSHOP {
+        background: linear-gradient(to right, $subtext-color 40%, $logos-color 40%);
+    }
+    #ENGLISH {
+        background: linear-gradient(to right, $subtext-color 75%, $logos-color 75%);
+    }
+}
+
+.experience {
+    .section-main-area.flex-container {
+        flex-direction: row;
+        align-items: stretch;
+    }
+}
+
+.timeline {
+    width: 1px;
+    border-left: 2px solid $partition-color;    
+}
+.timeline-points {
+    .timeline-point {
+        padding-left: 25px;
+        .timeline-point-year {
+            position: relative;
+            display: block;
+            font-size: 70%;
+            color: $partition-color;
+            margin-bottom: 10px;
+        }
+        .timeline-point-year::before {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            height: 10px;
+            width: 10px;
+            left: -31px;
+            background-color: $subtext-color;
+        }
+        .timeline-point-company {
+            display: block;
+            font-size: 125%;
+            font-weight: bold;
+            margin-bottom: 10px;            
+        }
+        .timeline-point-name {
+            display: block;
+            font-size: 80%;
+            margin-bottom: 10px;    
+        }
+        .timeline-point-location {
+            display: block;
+            font-size: 70%;
+            color: $partition-color;
+            margin-bottom: 10px;
+        }
+    }
+    .timeline-point:not(:last-of-type) {
+        margin-bottom: 30px;
+    }
+}
+
+.interaction {
+    article {
+        form { 
+            position: relative;
+            h5 {
+                display: inline-block;
+                margin-bottom: 30px;
+            }           
+            .enter {
+                cursor: pointer;
+                position: absolute;
+                top: -18px;
+                right: 0px;
+                background-color: $text-color;
+                transition: background-color 250ms;
+                filter: drop-shadow(0px 0px 2px $submain-color);
+                border: none;
+                outline: none;
+                text-decoration: none;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                .tick {
+                    display: block;
+                    margin-bottom: 7px;
+                    margin-left: 14px;
+                    height: 15px;
+                    width: 25px;
+                    border-left: 3px solid $submain-color;
+                    border-bottom: 3px solid $submain-color;
+                    transform: rotate(-45deg);
+                }
+            }
+            .enter:hover {
+                background-color: $subtext-color;
+                transition: background-color 250ms;
+            }
+        }
+    }
+    article:not(:last-of-type) {
+        padding-bottom: 30px;
+        border-bottom: 1px solid $partition-color;
+    }
+    article:not(:first-of-type) {
+        padding-top: 30px;
+    }
+}
+
+.yes-no-containers {
+    flex-direction: row;
+    justify-content: space-between;
+    .yes-no-container {
+        width: 45%;
+        text-align: center;
+        input {
+            display: none;
+        }
+        label {
+            display: block;
+            height: 50px;
+            background-color: $logos-color;
+            padding-top: 13px;	
+            transition: background-color 250ms;
+            cursor: pointer;
+        }
+        input:checked + label {
+            background-color: $subtext-color;
+            transition: background-color 250ms;
+            color: $submain-color;
+        }
+    }    
+}
+
+.checkbox-containers {
+    .checkbox-container {
+        position: relative;
+        input {
+            display: none;
+        }
+        input + label {
+            padding-left: 45px;
+            cursor: pointer;
+        }
+        input + label::before {
+            content: "";
+            position: absolute;
+            cursor: pointer;
+            top: -6px;
+            left: 0px;
+            width: 30px;
+            height: 30px;
+            border: 2px solid $partition-color;
+            transition: transform 400ms ease-out;
+        }
+        input:checked + label::before {
+            width: 30px;
+            height: 15px;
+            border-top: none;
+            border-right: none;
+            transform: rotate(-45deg);
+            border-color: $subtext-color;
+            border-width: 3px;
+        }
+        input:checked + label {
+            color: $subtext-color;	
+        }
+    }
+    .checkbox-container:not(:last-of-type) {
+        margin-bottom: 30px;
+    }
+}
+
+.checkbox-slide-containers {
+    .checkbox-slide-container {
+        position: relative;
+        flex-direction: row;
+        justify-content: flex-start;
+        input {
+            display: none;
+        }
+        .label-text {
+            width: 50%;
+            display: block;
+        }
+        .label-switch {
+            width: 50%;
+            display: block;
+            height: 14px;
+            margin-left: 25px;
+            position: relative;
+            height: 1px;
+            background-color: $partition-color;
+        }
+        .label-switch .round {
+            position: absolute;
+            top: -7px;
+            left: 0;
+            width: 10%;
+            height: 14px;
+            border: 2px solid $submain-color;
+            z-index: 1;
+            background-color: $text-color;
+            border-radius: 50%;
+            transition: transform 300ms;
+        }
+        input:checked + label + .label-switch .round {
+            position: absolute;
+            transform: translate(950%);
+            transition: transform 300ms;
+            background-color: $subtext-color;
+        }
+        input:checked + .label-text {
+            color: $subtext-color;
+        }
+    }
+    .checkbox-slide-container:not(:last-of-type) {
+        margin-bottom: 30px;
+    }
+}
+
+.text-field-containers {
+    .text-field-container {
+        input {
+            border: none;
+            outline: none;
+            width: 100%;
+            background-color: $main-color;
+            border-bottom: 1px solid $partition-color;
+            font-size: 130%;
+            color: $subtext-color;
+            line-height: 150%;
+        }   
+        .label-box {
+            position: relative;
+            label {
+                position: absolute;
+                top: -20px;
+                color: $partition-color;
+                transition: all 200ms;
+                cursor: text;
+            }
+        }
+        input:focus ~ .label-box label, input:valid ~ .label-box label {
+            font-size: 80%;
+            transform: translateY(-20px);
+            transition: all 200ms;
+            cursor: default;
+        }
+        .label-box::before, .label-box::after {
+            position: absolute;
+            content: "";
+            height: 1px;
+            width: 0;
+            bottom: 0px;
+            background-color: white;
+            transition: all 200ms;
+        }
+        .label-box::before {
+            left: 0;
+        }
+        .label-box::after {
+            right: 0;
+        }
+        input[type="text"]:focus ~ .label-box::before, input[type="text"]:focus ~ .label-box::after, input[type="text"]:valid ~ .label-box::before, input[type="text"]:valid ~ .label-box::after  {
+            width: 50%;
+        }
+         
+    }
+}
+
+
+
+
+
+
+
+
