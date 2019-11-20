@@ -139,8 +139,9 @@ header {
             margin-left: 15px;
         }
         a:hover svg path {
-            fill: $subtext-color;
+            fill: $subtext-color !important;
         }
+        //hover difficult svg for telegram
         a#telegram-link:hover svg path[style*="#25D9F8"] { //change light
             fill: $subtext-color !important;
         }

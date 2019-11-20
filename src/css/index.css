@@ -154,7 +154,7 @@ header h1 {
 }
 
 .social-links li a:hover svg path {
-  fill: #E0A80D;
+  fill: #E0A80D !important;
 }
 
 .social-links li a#telegram-link:hover svg path[style*="#25D9F8"] {
