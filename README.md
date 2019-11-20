@@ -1,2 +1,2 @@
 # CV
-Artem Lomakin personal website
+Artem Lomakin CV website
