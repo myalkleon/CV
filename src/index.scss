@@ -49,12 +49,6 @@ label {
     color: $subtext-color;
 }
 
-hr {
-    width: 80%;
-    border: none;
-    border-top: 1px solid $partition-color;
-}
-
 .flex-container {
     display: flex;
     flex-direction: column;
@@ -83,17 +77,14 @@ section {
     }
 }
 
-header {
+header.main-header {
     background-color: $main-color;
-    section {
-        @include paddings_for_element();
-    }
-    section:nth-of-type(1) {
-        border-bottom: none;
-    }
-    .person-photo {
-        border-radius: 50%;
+    .person-photo-container {
+        margin-top: 30px;
         margin-bottom: 20px;
+        .person-photo {
+            border-radius: 50%;
+        }        
     }
     .typing-container-1 {
         height: 40px;
@@ -127,6 +118,7 @@ header {
 
 .social-links {
     font-size: 0;
+    margin-bottom: 30px;
     li {
         display: inline-block;
         a {
@@ -164,6 +156,9 @@ header {
 }
  
 .contacts {
+    @include paddings_for_element();
+    width: 80%;
+    border-top: 1px solid $partition-color;
     h3 {
         margin-bottom: 10px;
     }
@@ -180,6 +175,12 @@ header {
         margin-bottom: 25px;
     }
 }    
+
+.about-me {
+    header {
+        border-top: 1px solid $partition-color;
+    }
+}
 
 .skills {
     .progressbar-layout {        
@@ -495,8 +496,6 @@ header {
          
     }
 }
-
-
 
 
 
