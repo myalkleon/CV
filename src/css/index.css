@@ -299,6 +299,8 @@ header.main-header h1 {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .timeline {

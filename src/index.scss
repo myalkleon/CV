@@ -252,6 +252,7 @@ header.main-header {
     .section-main-area.flex-container {
         flex-direction: row;
         align-items: stretch;
+        flex-wrap: nowrap;
     }
 }
 
