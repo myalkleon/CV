@@ -34,12 +34,6 @@ label {
   color: #E0A80D;
 }
 
-hr {
-  width: 80%;
-  border: none;
-  border-top: 1px solid #747575;
-}
-
 .flex-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -60,6 +54,7 @@ section {
 }
 
 section header {
+  width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: #282929;
@@ -74,67 +69,72 @@ section header h4 {
 }
 
 section .section-main-area {
+  width: 100%;
   padding-left: 25px;
   padding-right: 25px;
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-header {
+header.main-header {
   background-color: #2D2E2E;
 }
 
-header section {
-  padding-top: 30px;
-  padding-bottom: 30px;
+header.main-header .right-side {
+  width: 100%;
 }
 
-header section:nth-of-type(1) {
-  border-bottom: none;
-}
-
-header .person-photo {
-  border-radius: 50%;
+header.main-header .person-photo-container {
+  margin-top: 30px;
   margin-bottom: 20px;
 }
 
-header .typing-container-1 {
+header.main-header .person-photo-container .person-photo {
+  border-radius: 50%;
+}
+
+header.main-header .name-surname-position {
+  text-align: center;
+}
+
+header.main-header .name-surname-position .typing-container-1 {
   height: 40px;
 }
 
-header .typing-container-1 .name {
+header.main-header .name-surname-position .typing-container-1 .name {
   font-size: 250%;
 }
 
-header .typing-container-1 .name + span {
+header.main-header .name-surname-position .typing-container-1 .name + span {
   font-size: 200%;
 }
 
-header .typing-container-2 {
+header.main-header .name-surname-position .typing-container-2 {
   position: relative;
   height: 45px;
   margin-bottom: 20px;
 }
 
-header .typing-container-2 .surname {
+header.main-header .name-surname-position .typing-container-2 .surname {
   font-size: 300%;
   text-transform: uppercase;
 }
 
-header .typing-container-2 .surname + span {
+header.main-header .name-surname-position .typing-container-2 .surname + span {
   position: absolute;
   top: -5px;
   font-size: 300%;
   color: #E0A80D;
 }
 
-header h1 {
+header.main-header h1 {
   font-size: 95%;
   margin-bottom: 25px;
 }
 
 .social-links {
   font-size: 0;
+  margin-bottom: 30px;
 }
 
 .social-links li {
@@ -187,11 +187,19 @@ header h1 {
   margin-left: 10px;
 }
 
-.contacts h3 {
+.contacts {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 80%;
+  border-top: 1px solid #747575;
+  text-align: center;
+}
+
+.contacts .contact h3 {
   margin-bottom: 10px;
 }
 
-.contacts a:not(:last-of-type) {
+.contacts .contact:not(:last-of-type) {
   margin-bottom: 35px;
 }
 
@@ -201,6 +209,14 @@ header h1 {
 
 .section-main-area p:not(:last-of-type) {
   margin-bottom: 25px;
+}
+
+.about-me header {
+  border-top: 1px solid #747575;
+}
+
+.skills .progressbar-layout {
+  width: 100%;
 }
 
 .skills .progressbar-layout .progressbar-header {
@@ -334,6 +350,10 @@ header h1 {
 
 .timeline-points .timeline-point:not(:last-of-type) {
   margin-bottom: 30px;
+}
+
+.interaction article {
+  width: 100%;
 }
 
 .interaction article form {
@@ -592,4 +612,152 @@ header h1 {
 
 .text-field-containers .text-field-container input[type="text"]:focus ~ .label-box::before, .text-field-containers .text-field-container input[type="text"]:focus ~ .label-box::after, .text-field-containers .text-field-container input[type="text"]:valid ~ .label-box::before, .text-field-containers .text-field-container input[type="text"]:valid ~ .label-box::after {
   width: 50%;
+}
+
+@media screen and (min-width: 1000px) {
+  header.main-header {
+    height: 100vh;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  header.main-header .left-side.person-photo-container {
+    width: 40%;
+    height: 100vh;
+    padding-right: 5%;
+    padding-left: 20%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    margin: 0;
+    background-color: #282929;
+  }
+  header.main-header .left-side.person-photo-container .person-photo {
+    margin-bottom: 120px;
+    width: 250px;
+  }
+  header.main-header .right-side {
+    width: 60%;
+    height: 100vh;
+    padding-right: 10%;
+    padding-left: 5%;
+  }
+  header.main-header .right-side .my-brand {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: auto;
+  }
+  header.main-header .right-side .my-brand .name-surname-position {
+    margin-top: auto;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    text-align: left;
+    margin-right: auto;
+  }
+  header.main-header .right-side .my-brand .name-surname-position .typing-container-1 {
+    height: 60px;
+  }
+  header.main-header .right-side .my-brand .name-surname-position .typing-container-1 .name {
+    font-size: 400%;
+  }
+  header.main-header .right-side .my-brand .name-surname-position .typing-container-2 {
+    height: 60px;
+  }
+  header.main-header .right-side .my-brand .name-surname-position .typing-container-2 .surname {
+    font-size: 400%;
+  }
+  header.main-header .right-side .my-brand .name-surname-position .typing-container-2 .surname + span {
+    font-size: 400%;
+  }
+  header.main-header .right-side .my-brand .name-surname-position h1 {
+    margin-left: 2px;
+    font-size: 150%;
+  }
+  header.main-header .right-side .my-brand .social-links {
+    margin-left: auto;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-bottom: 15px;
+  }
+  header.main-header .right-side .contacts {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: auto;
+  }
+  header.main-header .right-side .contacts .contact {
+    margin-bottom: 0;
+  }
+  main section.flex-container:nth-of-type(2n+1) header {
+    background-color: #252525;
+  }
+  main section.flex-container:nth-of-type(2n+1) .section-main-area {
+    background-color: #282929;
+  }
+  main .section-main-area.flex-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  main section.flex-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    border: none;
+  }
+  main section.flex-container header {
+    border: none;
+    text-align: right;
+    width: 40%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-right: 5%;
+    padding-left: 20%;
+    margin-left: auto;
+  }
+  main section.flex-container header p {
+    font-size: 85%;
+  }
+  main section.flex-container .section-main-area {
+    width: 60%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-right: 10%;
+    padding-left: 5%;
+  }
+  main section.skills .progressbar-layout {
+    margin: 0;
+    width: 45%;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+  }
+  main section.skills .progressbar-layout:not(:nth-of-type(1)):not(:nth-of-type(2)) {
+    margin-top: 30px;
+  }
 }

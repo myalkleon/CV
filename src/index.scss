@@ -1,5 +1,6 @@
 $main-color: #2D2E2E; //dark
 $submain-color: #282929; //darker
+$subsubmain-color: #252525;//the darkest
 
 $text-color: #A4A5A6;
 $subtext-color: #E0A80D;
@@ -49,12 +50,6 @@ label {
     color: $subtext-color;
 }
 
-hr {
-    width: 80%;
-    border: none;
-    border-top: 1px solid $partition-color;
-}
-
 .flex-container {
     display: flex;
     flex-direction: column;
@@ -66,6 +61,7 @@ section {
     width: 100%;
     background-color: $main-color;
     header {
+        width: 100%;
         @include paddings_for_element();
         background-color: $submain-color;
         border-bottom: 1px solid $partition-color;
@@ -77,46 +73,51 @@ section {
         }
     }
     .section-main-area {
+        width: 100%;
         padding-left: 25px;
         padding-right: 25px;
         @include paddings_for_element();      
     }
 }
 
-header {
+header.main-header {
     background-color: $main-color;
-    section {
-        @include paddings_for_element();
+    .right-side {
+        width: 100%;
     }
-    section:nth-of-type(1) {
-        border-bottom: none;
-    }
-    .person-photo {
-        border-radius: 50%;
+    .person-photo-container {
+        margin-top: 30px;
         margin-bottom: 20px;
+        .person-photo {
+            border-radius: 50%;
+        }        
     }
-    .typing-container-1 {
-        height: 40px;
-        .name {
-            font-size: 250%;
+
+    .name-surname-position { 
+        text-align: center;   
+        .typing-container-1 {
+            height: 40px;
+            .name {
+                font-size: 250%;
+            }
+            .name + span {
+                font-size: 200%;
+            }
         }
-        .name + span {
-            font-size: 200%;
-        }
-    }
-    .typing-container-2 {
-        position: relative;
-        height: 45px;
-        margin-bottom: 20px;
-        .surname {
-            font-size: 300%;
-            text-transform: uppercase;
-        }
-        .surname + span {
-            position: absolute;
-            top: -5px;
-            font-size: 300%;
-            color: $subtext-color;
+        .typing-container-2 {
+            position: relative;
+            height: 45px;
+            margin-bottom: 20px;
+            .surname {
+                font-size: 300%;
+                text-transform: uppercase;
+            }
+            .surname + span {
+                position: absolute;
+                top: -5px;
+                font-size: 300%;
+                color: $subtext-color;
+            }
         }
     }
     h1 {
@@ -127,6 +128,7 @@ header {
 
 .social-links {
     font-size: 0;
+    margin-bottom: 30px;
     li {
         display: inline-block;
         a {
@@ -164,10 +166,16 @@ header {
 }
  
 .contacts {
-    h3 {
-        margin-bottom: 10px;
-    }
-    a:not(:last-of-type) {
+    @include paddings_for_element();
+    width: 80%;
+    border-top: 1px solid $partition-color;
+    text-align: center;
+    .contact {
+        h3 {
+            margin-bottom: 10px;
+        }
+    }    
+    .contact:not(:last-of-type) {
         margin-bottom: 35px;
     }
 }
@@ -181,8 +189,15 @@ header {
     }
 }    
 
+.about-me {
+    header {
+        border-top: 1px solid $partition-color;
+    }
+}
+
 .skills {
-    .progressbar-layout {        
+    .progressbar-layout {  
+        width: 100%;      
         .progressbar-header {
             margin-bottom: 10px;
             .progressbar-percentage {
@@ -288,6 +303,7 @@ header {
 
 .interaction {
     article {
+        width: 100%;
         form { 
             position: relative;
             h5 {
@@ -496,7 +512,144 @@ header {
     }
 }
 
+//Adaptive layout widescreen
+@media screen and (min-width: 1000px) {
+    header.main-header {
+        height: 100vh;
+        flex-direction: row;
+        .left-side.person-photo-container {
+            width: 40%;
+            height: 100vh;
+            padding-right: 5%;
+            padding-left: 20%;
+            justify-content: center;
+            align-items: flex-end;
+            margin: 0;  
+            background-color: $submain-color; 
+            .person-photo {
+                margin-bottom: 120px;
+                width: 250px;
+            }
+        }
+        .right-side {
+            width: 60%;
+            height: 100vh;
+            padding-right: 10%;
+            padding-left: 5%;
+            .my-brand {
+                width: 100%;
+                flex-direction: row;
+                justify-content: center;
+                margin-top: auto;
+                .name-surname-position {
+                    margin-top: auto;
+                    align-self: flex-start;
+                    text-align: left;
+                    margin-right: auto;
+                    .typing-container-1 {
+                        height: 60px;
+                        .name {
+                            font-size: 400%;
+                        }
+                    }
+                    .typing-container-2 {
+                        height: 60px;
+                        .surname {
+                            font-size: 400%;
+                        }
+                        .surname + span {
+                            font-size: 400%;
+                        }
+                    }
+                    h1 {
+                        margin-left: 2px;
+                        font-size: 150%;
+                    }                   
+                }
+                .social-links {
+                    margin-left: auto;
+                    align-self: flex-end;
+                    margin-bottom: 15px;
+                }
+            }
+            .contacts {
+                width: 100%;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-top: auto;
+                .contact {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    main {
+        //mixing colors
+        section.flex-container:nth-of-type(2n+1) header {
+            background-color: $subsubmain-color;
+        }
+        section.flex-container:nth-of-type(2n+1) .section-main-area {
+            background-color: $submain-color;
+        }
+        //
 
+        .section-main-area.flex-container {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        section.flex-container {
+            flex-direction: row;
+            align-items: stretch;
+            border: none;
+            header {
+                border: none;
+                text-align: right;
+                width: 40%;
+                padding-top: 60px;
+                padding-bottom: 60px;
+                padding-right: 5%;
+                padding-left: 20%;
+                margin-left: auto;
+                p {
+                    font-size: 85%;
+                }
+            }
+            .section-main-area {
+                width: 60%;
+                padding-top: 60px;
+                padding-bottom: 60px;
+                padding-right: 10%;
+                padding-left: 5%;
+            }
+        }
+        section.skills {
+            .progressbar-layout {
+                margin: 0;
+                width: 45%;
+                align-self: stretch;
+            }
+            .progressbar-layout:not(:nth-of-type(1)):not(:nth-of-type(2)) {
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+//Interact 2columns layout
+// @media screen and (min-width: 1376px) {
+//     section.interaction.flex-container article {
+//         width: 45%;
+//         margin: 0;
+//         align-self: flex-start;
+//         border: none;
+//         padding-bottom: 0px;
+//         padding-top: 0px;
+//     } 
+//     section.interaction.flex-container article:nth-last-of-type(-n+2) {
+//         margin-top: 30px;
+//     }
+// }
 
 
 
