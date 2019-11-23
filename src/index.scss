@@ -303,6 +303,7 @@ header.main-header {
 
 .interaction {
     article {
+        width: 100%;
         form { 
             position: relative;
             h5 {
@@ -512,7 +513,7 @@ header.main-header {
 }
 
 //Adaptive layout widescreen
-@media screen and (min-width: 1250px) {
+@media screen and (min-width: 1000px) {
     header.main-header {
         height: 100vh;
         flex-direction: row;
@@ -533,7 +534,7 @@ header.main-header {
         .right-side {
             width: 60%;
             height: 100vh;
-            padding-right: 15%;
+            padding-right: 10%;
             padding-left: 5%;
             .my-brand {
                 width: 100%;
@@ -592,6 +593,11 @@ header.main-header {
         }
         //
 
+        .section-main-area.flex-container {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
         section.flex-container {
             flex-direction: row;
             align-items: stretch;
@@ -613,27 +619,37 @@ header.main-header {
                 width: 60%;
                 padding-top: 60px;
                 padding-bottom: 60px;
-                padding-right: 15%;
+                padding-right: 10%;
                 padding-left: 5%;
             }
         }
         section.skills {
-            .section-main-area.flex-container {
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                .progressbar-layout {
-                    margin: 0;
-                    width: 45%;
-                    align-self: flex-end;
-                }
-                .progressbar-layout:not(:nth-of-type(1)):not(:nth-of-type(2)) {
-                    margin-top: 30px;
-                }
+            .progressbar-layout {
+                margin: 0;
+                width: 45%;
+                align-self: stretch;
+            }
+            .progressbar-layout:not(:nth-of-type(1)):not(:nth-of-type(2)) {
+                margin-top: 30px;
             }
         }
     }
 }
+
+//Interact 2columns layout
+// @media screen and (min-width: 1376px) {
+//     section.interaction.flex-container article {
+//         width: 45%;
+//         margin: 0;
+//         align-self: flex-start;
+//         border: none;
+//         padding-bottom: 0px;
+//         padding-top: 0px;
+//     } 
+//     section.interaction.flex-container article:nth-last-of-type(-n+2) {
+//         margin-top: 30px;
+//     }
+// }
 
 
 

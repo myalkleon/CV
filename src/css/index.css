@@ -352,6 +352,10 @@ header.main-header h1 {
   margin-bottom: 30px;
 }
 
+.interaction article {
+  width: 100%;
+}
+
 .interaction article form {
   position: relative;
 }
@@ -610,7 +614,7 @@ header.main-header h1 {
   width: 50%;
 }
 
-@media screen and (min-width: 1250px) {
+@media screen and (min-width: 1000px) {
   header.main-header {
     height: 100vh;
     -webkit-box-orient: horizontal;
@@ -639,7 +643,7 @@ header.main-header h1 {
   header.main-header .right-side {
     width: 60%;
     height: 100vh;
-    padding-right: 15%;
+    padding-right: 10%;
     padding-left: 5%;
   }
   header.main-header .right-side .my-brand {
@@ -705,6 +709,17 @@ header.main-header h1 {
   main section.flex-container:nth-of-type(2n+1) .section-main-area {
     background-color: #282929;
   }
+  main .section-main-area.flex-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
   main section.flex-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -732,27 +747,17 @@ header.main-header h1 {
     width: 60%;
     padding-top: 60px;
     padding-bottom: 60px;
-    padding-right: 15%;
+    padding-right: 10%;
     padding-left: 5%;
   }
-  main section.skills .section-main-area.flex-container {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  main section.skills .section-main-area.flex-container .progressbar-layout {
+  main section.skills .progressbar-layout {
     margin: 0;
     width: 45%;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
   }
-  main section.skills .section-main-area.flex-container .progressbar-layout:not(:nth-of-type(1)):not(:nth-of-type(2)) {
+  main section.skills .progressbar-layout:not(:nth-of-type(1)):not(:nth-of-type(2)) {
     margin-top: 30px;
   }
 }
