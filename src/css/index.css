@@ -54,6 +54,7 @@ section {
 }
 
 section header {
+  width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: #282929;
@@ -68,6 +69,7 @@ section header h4 {
 }
 
 section .section-main-area {
+  width: 100%;
   padding-left: 25px;
   padding-right: 25px;
   padding-top: 30px;
@@ -211,6 +213,10 @@ header.main-header h1 {
 
 .about-me header {
   border-top: 1px solid #747575;
+}
+
+.skills .progressbar-layout {
+  width: 100%;
 }
 
 .skills .progressbar-layout .progressbar-header {
@@ -613,10 +619,10 @@ header.main-header h1 {
             flex-direction: row;
   }
   header.main-header .left-side.person-photo-container {
-    width: 40vw;
+    width: 40%;
     height: 100vh;
-    padding-right: 5vw;
-    padding-left: 20vw;
+    padding-right: 5%;
+    padding-left: 20%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -631,10 +637,10 @@ header.main-header h1 {
     width: 250px;
   }
   header.main-header .right-side {
-    width: 60vw;
+    width: 60%;
     height: 100vh;
-    padding-right: 20vw;
-    padding-left: 5vw;
+    padding-right: 15%;
+    padding-left: 5%;
   }
   header.main-header .right-side .my-brand {
     width: 100%;
@@ -670,6 +676,7 @@ header.main-header h1 {
     font-size: 400%;
   }
   header.main-header .right-side .my-brand .name-surname-position h1 {
+    margin-left: 2px;
     font-size: 150%;
   }
   header.main-header .right-side .my-brand .social-links {
@@ -691,5 +698,61 @@ header.main-header h1 {
   }
   header.main-header .right-side .contacts .contact {
     margin-bottom: 0;
+  }
+  main section.flex-container:nth-of-type(2n+1) header {
+    background-color: #252525;
+  }
+  main section.flex-container:nth-of-type(2n+1) .section-main-area {
+    background-color: #282929;
+  }
+  main section.flex-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    border: none;
+  }
+  main section.flex-container header {
+    border: none;
+    text-align: right;
+    width: 40%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-right: 5%;
+    padding-left: 20%;
+    margin-left: auto;
+  }
+  main section.flex-container header p {
+    font-size: 85%;
+  }
+  main section.flex-container .section-main-area {
+    width: 60%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-right: 15%;
+    padding-left: 5%;
+  }
+  main section.skills .section-main-area.flex-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  main section.skills .section-main-area.flex-container .progressbar-layout {
+    margin: 0;
+    width: 45%;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  main section.skills .section-main-area.flex-container .progressbar-layout:not(:nth-of-type(1)):not(:nth-of-type(2)) {
+    margin-top: 30px;
   }
 }

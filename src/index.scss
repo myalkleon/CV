@@ -1,5 +1,6 @@
 $main-color: #2D2E2E; //dark
 $submain-color: #282929; //darker
+$subsubmain-color: #252525;//the darkest
 
 $text-color: #A4A5A6;
 $subtext-color: #E0A80D;
@@ -60,6 +61,7 @@ section {
     width: 100%;
     background-color: $main-color;
     header {
+        width: 100%;
         @include paddings_for_element();
         background-color: $submain-color;
         border-bottom: 1px solid $partition-color;
@@ -71,6 +73,7 @@ section {
         }
     }
     .section-main-area {
+        width: 100%;
         padding-left: 25px;
         padding-right: 25px;
         @include paddings_for_element();      
@@ -193,7 +196,8 @@ header.main-header {
 }
 
 .skills {
-    .progressbar-layout {        
+    .progressbar-layout {  
+        width: 100%;      
         .progressbar-header {
             margin-bottom: 10px;
             .progressbar-percentage {
@@ -507,16 +511,16 @@ header.main-header {
     }
 }
 
-//Adaptive layout
+//Adaptive layout widescreen
 @media screen and (min-width: 1250px) {
     header.main-header {
         height: 100vh;
         flex-direction: row;
         .left-side.person-photo-container {
-            width: 40vw;
+            width: 40%;
             height: 100vh;
-            padding-right: 5vw;
-            padding-left: 20vw;
+            padding-right: 5%;
+            padding-left: 20%;
             justify-content: center;
             align-items: flex-end;
             margin: 0;  
@@ -527,10 +531,10 @@ header.main-header {
             }
         }
         .right-side {
-            width: 60vw;
+            width: 60%;
             height: 100vh;
-            padding-right: 20vw;
-            padding-left: 5vw;
+            padding-right: 15%;
+            padding-left: 5%;
             .my-brand {
                 width: 100%;
                 flex-direction: row;
@@ -557,6 +561,7 @@ header.main-header {
                         }
                     }
                     h1 {
+                        margin-left: 2px;
                         font-size: 150%;
                     }                   
                 }
@@ -577,7 +582,57 @@ header.main-header {
             }
         }
     }
-    
+    main {
+        //mixing colors
+        section.flex-container:nth-of-type(2n+1) header {
+            background-color: $subsubmain-color;
+        }
+        section.flex-container:nth-of-type(2n+1) .section-main-area {
+            background-color: $submain-color;
+        }
+        //
+
+        section.flex-container {
+            flex-direction: row;
+            align-items: stretch;
+            border: none;
+            header {
+                border: none;
+                text-align: right;
+                width: 40%;
+                padding-top: 60px;
+                padding-bottom: 60px;
+                padding-right: 5%;
+                padding-left: 20%;
+                margin-left: auto;
+                p {
+                    font-size: 85%;
+                }
+            }
+            .section-main-area {
+                width: 60%;
+                padding-top: 60px;
+                padding-bottom: 60px;
+                padding-right: 15%;
+                padding-left: 5%;
+            }
+        }
+        section.skills {
+            .section-main-area.flex-container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                .progressbar-layout {
+                    margin: 0;
+                    width: 45%;
+                    align-self: flex-end;
+                }
+                .progressbar-layout:not(:nth-of-type(1)):not(:nth-of-type(2)) {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
 }
 
 
