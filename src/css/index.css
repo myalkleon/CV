@@ -614,7 +614,7 @@ header.main-header h1 {
   width: 50%;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1096px) {
   header.main-header {
     height: 100vh;
     -webkit-box-orient: horizontal;
@@ -688,6 +688,10 @@ header.main-header h1 {
     -ms-flex-item-align: end;
         align-self: flex-end;
     margin-bottom: 15px;
+  }
+  header.main-header .right-side .my-brand .social-links li a {
+    height: 40px;
+    width: 40px;
   }
   header.main-header .right-side .contacts {
     width: 100%;

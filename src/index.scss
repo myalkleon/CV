@@ -513,7 +513,7 @@ header.main-header {
 }
 
 //Adaptive layout widescreen
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1096px) {
     header.main-header {
         height: 100vh;
         flex-direction: row;
@@ -570,6 +570,12 @@ header.main-header {
                     margin-left: auto;
                     align-self: flex-end;
                     margin-bottom: 15px;
+                    li {
+                        a {
+                            height: 40px;
+                            width: 40px;
+                        }
+                    }
                 }
             }
             .contacts {
