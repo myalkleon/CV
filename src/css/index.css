@@ -354,6 +354,34 @@ header.main-header h1 {
   margin-bottom: 30px;
 }
 
+.facts a {
+  text-decoration: underline;
+}
+
+.favorites .section-main-area.flex-container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.favorites .section-main-area.flex-container .thing {
+  width: 100%;
+}
+
+.favorites .section-main-area.flex-container .thing img {
+  width: 100%;
+}
+
+.favorites .section-main-area.flex-container .thing:not(:last-of-type) {
+  margin-bottom: 30px;
+}
+
 .interaction article {
   width: 100%;
 }
@@ -765,5 +793,19 @@ header.main-header h1 {
   }
   main section.skills .progressbar-layout:not(:nth-of-type(1)):not(:nth-of-type(2)) {
     margin-top: 30px;
+  }
+  main .favorites .section-main-area.flex-container {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  main .favorites .section-main-area.flex-container .thing {
+    width: 45%;
+  }
+  main .favorites .section-main-area.flex-container .thing img {
+    width: 100%;
+  }
+  main .favorites .section-main-area.flex-container .thing:not(:last-of-type) {
+    margin-bottom: 60px;
   }
 }
