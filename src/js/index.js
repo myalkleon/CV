@@ -21,7 +21,6 @@ function fadeOut(element, animTime) {
   }, animTime);
 }
 
-document.body.style.overflow = 'hidden';
 window.onload = () => {
   let onloader = document.getElementById('onloader');
   setTimeout(() => {
@@ -29,7 +28,7 @@ window.onload = () => {
       fadeOut(onloader, 350);
       setTimeout(imitateTyping, 350);
     } finally {
-      document.body.style.overflow = 'visible';
+      window.scrollTo(0, 0);
     }
   }, 500);  
 };
