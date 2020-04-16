@@ -1,34 +1,50 @@
 function imitateTyping() {
-  var options1 = {
-    strings: ['artem'],
-    typeSpeed: 100,
-    showCursor: false,
-  };
-  var typed = new Typed('.typing-imitation-1', options1);
+    let optionsName = {
+        strings: ['artem'],
+        typeSpeed: 100,
+        showCursor: false,
+    };
+    new Typed('.typing-imitation-1', optionsName);
   
-  var options2 = {
-    strings: ['Lomakin'],
-    typeSpeed: 200,
-  };
-  var typed = new Typed('.typing-imitation-2', options2);
+    let optionsSurname = {
+        strings: ['Lomakin'],
+        typeSpeed: 200,
+    };
+    new Typed('.typing-imitation-2', optionsSurname);
 }
 
-function fadeOut(element, animTime) {  
-  element.style.transition = `opacity ${animTime}ms`;
-  element.style.opacity = '0';
-  setTimeout(() => {
-    element.style.display = 'none';
-  }, animTime);
+function fadeOutByTransitionPromised(element, animTime) {
+    return new Promise((resolve, reject) => {
+        element.style.transition = `opacity ${animTime}ms`;
+        element.style.opacity = '0';
+        element.addEventListener("transitionend", () => {
+            element.style.display = 'none';
+            resolve();
+        })
+    })  
 }
 
-window.onload = () => {
-  let onloader = document.getElementById('onloader');
-  setTimeout(() => {
-    try {
-      fadeOut(onloader, 350);
-      setTimeout(imitateTyping, 350);
-    } finally {
-      window.scrollTo(0, 0);
+function addStylesToProgressBars() {
+    let subtextColor = window.getComputedStyle(document.querySelector(".subtext")).color;
+    let logosColor = window.getComputedStyle(document.querySelector(".yes-no-container").querySelector("label")).color;
+    
+    let progressBarsLayouts = document.querySelectorAll(".progressbar-layout");
+    for (let progressbarLayout of progressBarsLayouts) {
+        let progressbar = progressbarLayout.querySelector(".progressbar");
+        let id = progressbar.id;
+        let percent = Number(progressbarLayout.querySelector(".progressbar-percentage").textContent.match(/\d+/)[0]);
+        progressbar.style.background = `linear-gradient(to right, ${subtextColor} ${percent}%, ${logosColor} ${percent}%)`;
+        let a = 1;
     }
-  }, 500);  
+}
+
+function loadingScenario() {
+    let onloader = document.getElementById('onloader');
+    addStylesToProgressBars();
+    fadeOutByTransitionPromised(onloader, 350)
+    .then(imitateTyping);  
+}
+  
+window.onload = () => {    
+    setTimeout(loadingScenario, 500);  
 };

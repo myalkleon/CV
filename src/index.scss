@@ -226,36 +226,6 @@ header.main-header {
     .progressbar-layout:not(:last-of-type) {
         margin-bottom: 25px;
     }
-    #html {
-        background: linear-gradient(to right, $subtext-color 80%, $logos-color 80%);
-    }
-    #css {
-        background: linear-gradient(to right, $subtext-color 70%, $logos-color 70%);
-    }
-    #javascript {
-        background: linear-gradient(to right, $subtext-color 50%, $logos-color 50%);
-    }
-    #environment {
-        background: linear-gradient(to right, $subtext-color 50%, $logos-color 50%);
-    } 
-    #react {
-        background: linear-gradient(to right, $subtext-color 25%, $logos-color 25%);    
-    }
-    #node {
-        background: linear-gradient(to right, $subtext-color 40%, $logos-color 40%);    
-    }
-    #seo {
-        background: linear-gradient(to right, $subtext-color 20%, $logos-color 20%);
-    } 
-    #git {
-        background: linear-gradient(to right, $subtext-color 85%, $logos-color 85%);
-    } 
-    #photoshop {
-        background: linear-gradient(to right, $subtext-color 30%, $logos-color 30%);
-    }
-    #english {
-        background: linear-gradient(to right, $subtext-color 75%, $logos-color 75%);
-    }
 }
 
 .experience {
@@ -704,9 +674,3 @@ header.main-header {
 //         margin-top: 30px;
 //     }
 // }
-
-
-
-
-
-
