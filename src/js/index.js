@@ -31,10 +31,8 @@ function addStylesToProgressBars() {
     let progressBarsLayouts = document.querySelectorAll(".progressbar-layout");
     for (let progressbarLayout of progressBarsLayouts) {
         let progressbar = progressbarLayout.querySelector(".progressbar");
-        let id = progressbar.id;
         let percent = Number(progressbarLayout.querySelector(".progressbar-percentage").textContent.match(/\d+/)[0]);
         progressbar.style.background = `linear-gradient(to right, ${subtextColor} ${percent}%, ${logosColor} ${percent}%)`;
-        let a = 1;
     }
 }
 
