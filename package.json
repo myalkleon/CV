@@ -1,0 +1,29 @@
+{
+  "name": "myalkleon-cv",
+  "version": "0.0.1",
+  "description": "web developer CV",
+  "private": true,
+  "scripts": {
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myalkleon/CV.git"
+  },
+  "keywords": [
+    "CV",
+    "web",
+    "developer",
+    "resume"
+  ],
+  "author": "myalkleon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/myalkleon/CV/issues"
+  },
+  "homepage": "https://github.com/myalkleon/CV#readme",
+  "devDependencies": {
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}
