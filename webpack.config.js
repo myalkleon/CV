@@ -19,7 +19,7 @@ module.exports = {
         main: "./js/index.js",
     },
     output: {
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, "docs"),
         filename: "bundle.js",
     },
     devServer: {
