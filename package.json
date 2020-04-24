@@ -4,7 +4,9 @@
   "description": "web developer CV",
   "private": true,
   "scripts": {
-    
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "dev": "cross-env NODE_ENV=development webpack --mode development",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --open"
   },
   "repository": {
     "type": "git",
@@ -23,7 +25,21 @@
   },
   "homepage": "https://github.com/myalkleon/CV#readme",
   "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "colors": "^1.4.0",
+    "cross-env": "^7.0.2",
+    "css-loader": "^3.5.2",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.0",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.4",
     "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "typed.js": "^2.0.11"
   }
 }

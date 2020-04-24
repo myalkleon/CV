@@ -1,3 +1,14 @@
+import Typed from "typed.js";
+
+import "@img/Arduino.svg";
+import "@img/Bethesda.svg";
+import "@img/Fallout.svg";
+import "@img/Loading.svg";
+import "@img/Minecraft.svg";
+import "@img/Person-250.jpg";
+
+import "../scss/index.scss";
+
 function imitateTyping() {
     let optionsName = {
         strings: ['artem'],
