@@ -2,7 +2,7 @@
 My first project.  
 It is deployed and you can visit it at the [link](https://myalkleon.github.io/CV/).  
 ## Some intersting facts about it's stack:
-- Webpack for comfortable builds and "deploy" (due to GitHub Pages project settings, files in "docs" dir of master branch are used for deploy;
+- Webpack for comfortable builds and "deploy" (files in "docs" dir of master branch are used for deploy due to GitHub Pages project settings);  
 - Webpack dev server for live reload and hmr;
 - Sass loader for easy scss webpack-based transpiling;
 - Typed.js for typing imitation;
